@@ -25,6 +25,6 @@ class Qalampir_uz:
         
     
 
-obj = Qalampir_uz.text('https://qalampir.uz/news/17-mingdan-ortik-migrant-turkiyadan-chik-arib-yuborildi-87777')
+obj = Qalampir_uz.text('https://qalampir.uz/uz/news/k-irgizistonda-davlat-tilida-efir-yuritmagan-telekanallar-zharimaga-tortildi-87929')
 print(obj)
 
