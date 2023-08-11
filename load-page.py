@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-
+from qalampir_uz import Qalampir_uz
 
 # source = requests.get('https://qalampir.uz/uz/post/category-ajax?id=3&limit=10&offset=1').text
 
@@ -22,7 +22,9 @@ href_values = []
 for div_element in div_elements:
     a_tags = div_element.find_all('a', href=True)
     for a_tag in a_tags:
-        href_values.append(a_tag['href'])
+        href_values.append('https://qalampir.uz' + a_tag['href'])
+
+
 for i in range(n):
-    print()
-    print('https://qalampir.uz'+''.join(href_values[i]))
+    scrape = Qalampir_uz.text(href_values[i])
+    print('\n\n\n' + scrape)
